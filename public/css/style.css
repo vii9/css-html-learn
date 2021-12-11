@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(39, 31, 31);
+}
+
+.parent {
+  display: flex;
+}
+.child {
+  color: rgb(46, 45, 45);
+  height: 50px;
+  width: 165px;
+}
+
+.child1 {
+  background-color: burlywood;
+}
+
+.child2 {
+  background-color: green;
+  position: relative;
+  width: 265px;
+}
+
+.child2 .title {
+  /* z-index: 2; */
+  /* position: absolute; */
+  /* left: 10px; */
+}
+
+.child2 .title2 {
+  /* z-index: 2; */
+  /* position: absolute; */
+  /* left: 10px; */
+}
+.child2 img {
+  width: 30px;
+  border-radius: 50%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  /* position: absolute; */
+  /* z-index: 4; */
+  /* top: 0; */
+  /* left: 0; */
+}
+
+.child .img2 {
+  width: 60px;
+  height: 30px;
+  /* z-index: 3; */
+
+  /* position: absolute; */
+  /* left: 10px; */
+}
+
+.child2 img:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  cursor: pointer;
+}
+.child3 {
+  background-color: fuchsia;
+}
