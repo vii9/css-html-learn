@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Challenge</title>
+    <!-- <link rel="stylesheet" href="../public/css/style.css" /> -->
+    <style>
+      .img-animate {
+      }
+
+      .img-animate .img-main {
+        width: 200px;
+        height: 150px;
+         /* transition: box-shadow 1s; */
+        /* ease-in => start slow , ease-out => end slow */
+         transition: box-shadow 1s, width 2s, height 4s, transform 2s, ease-in 1s;
+      }
+
+      .img-animate .img-main:hover {
+        cursor: pointer;
+        width: 250px;
+        height: 300px;
+        transform: rotate(360deg);
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-animate">
+        <img
+          src="https://thienthoi.com.vn/wp-content/uploads/2020/09/thienthoi-39.jpg"
+          alt="img"
+          class="img-main"
+        />
+        <audio id="sound-main">
+          <source src="../public/sound/sound.mp3"></source>
+        </audio>
+        
+      </div>
+    </div>
+
+    <script>
+      var audio = document.querySelector('#sound-main');
+      
+      document.querySelector('.img-main').addEventListener('mouseenter', () => {
+        console.log('Khoan..khoan....hhaaa');
+        audio.play();
+      })
+    </script>
+  </body>
+</html>
